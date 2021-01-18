@@ -1,0 +1,11 @@
+package io.spring.sample.{{package_name}}
+
+import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.runApplication
+
+@SpringBootApplication(scanBasePackages = ["io.spring.sample"], proxyBeanMethods = false)
+class App
+
+fun main(args: Array<String>) {
+    runApplication<App>(*args)
+}
