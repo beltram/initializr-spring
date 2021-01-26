@@ -4,8 +4,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.springframework.boot.gradle.plugin.SpringBootPlugin.*
 import org.gradle.api.tasks.wrapper.Wrapper.DistributionType.BIN
 
-val springCloudVersion by extra { "2020.0.0-SNAPSHOT" }
-val kotlinVersion = "1.4.21"
+val springCloudVersion by extra { "{{spring_cloud_version}}" }
+val kotlinVersion = "{{kotlin_version}}"
 
 buildscript {
     repositories {
@@ -17,10 +17,10 @@ buildscript {
 
 plugins {
     idea
-    val kotlinVersion = "1.4.21"
+    val kotlinVersion = "{{kotlin_version}}"
     kotlin("jvm") version kotlinVersion
     kotlin("plugin.spring") version kotlinVersion
-    id("org.springframework.boot") version "2.4.2-SNAPSHOT"
+    id("org.springframework.boot") version "{{spring_boot_version}}"
 }
 apply {
     plugin("io.spring.dependency-management")

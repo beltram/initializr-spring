@@ -1,0 +1,8 @@
+[spring-boot-version]
+about = 'Spring Boot version'
+default = '2.4.2'
+kind = 'STRING'
+[spring-cloud-version]
+about = 'Spring Cloud version'
+default = '2020.0.0'
+kind = 'STRING'
