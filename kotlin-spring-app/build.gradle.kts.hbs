@@ -4,8 +4,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.springframework.boot.gradle.plugin.SpringBootPlugin.*
 import org.gradle.api.tasks.wrapper.Wrapper.DistributionType.BIN
 
-val springCloudVersion by extra { "{{spring_cloud_version}}" }
-val kotlinVersion = "{{kotlin_version}}"
+val springCloudVersion by extra { "{{spring-cloud-version}}" }
+val kotlinVersion = "{{kotlin-version}}"
 
 buildscript {
     repositories {
@@ -17,10 +17,10 @@ buildscript {
 
 plugins {
     idea
-    val kotlinVersion = "{{kotlin_version}}"
+    val kotlinVersion = "{{kotlin-version}}"
     kotlin("jvm") version kotlinVersion
     kotlin("plugin.spring") version kotlinVersion
-    id("org.springframework.boot") version "{{spring_boot_version}}"
+    id("org.springframework.boot") version "{{spring-boot-version}}"
 }
 apply {
     plugin("io.spring.dependency-management")
@@ -64,6 +64,6 @@ dependencies {
 tasks.withType<Test> { useJUnitPlatform() }
 
 tasks.withType<Wrapper>().configureEach {
-    gradleVersion = "6.7.1"
+    gradleVersion = "{{gradle-version}}"
     distributionType = BIN
 }

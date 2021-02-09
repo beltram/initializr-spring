@@ -3,7 +3,7 @@ import io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension
 import org.springframework.boot.gradle.plugin.SpringBootPlugin.*
 import org.gradle.api.tasks.wrapper.Wrapper.DistributionType.BIN
 
-val springCloudVersion by extra { "2020.0.0-SNAPSHOT" }
+val springCloudVersion by extra { "{{spring-cloud-version}}" }
 
 buildscript {
     repositories {
@@ -15,7 +15,7 @@ buildscript {
 
 plugins {
     java
-    id("org.springframework.boot") version "2.4.2-SNAPSHOT"
+    id("org.springframework.boot") version "{{spring-boot-version}}"
 }
 
 apply {
@@ -50,6 +50,6 @@ dependencies {
 tasks.withType<Test> { useJUnitPlatform() }
 
 tasks.withType<Wrapper>().configureEach {
-    gradleVersion = "6.7.1"
+    gradleVersion = "{{gradle-version}}"
     distributionType = BIN
 }

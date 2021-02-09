@@ -6,3 +6,7 @@ kind = 'STRING'
 about = 'Spring Cloud version'
 default = '2020.0.0'
 kind = 'STRING'
+[gradle-version]
+about = 'Gradle wrapper version'
+default = '6.8.1'
+kind = 'STRING'
