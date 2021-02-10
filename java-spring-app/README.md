@@ -1,4 +1,4 @@
-# {{project-name}}
+# {{proj}}
 
 Sample Spring Boot kotlin application
 
