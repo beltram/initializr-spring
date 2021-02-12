@@ -48,8 +48,3 @@ dependencies {
 }
 
 tasks.withType<Test> { useJUnitPlatform() }
-
-tasks.withType<Wrapper>().configureEach {
-    gradleVersion = "{{gradle-version}}"
-    distributionType = BIN
-}

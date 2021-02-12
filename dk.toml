@@ -1,17 +1,16 @@
 [spring-boot-version]
 about = 'Spring Boot version'
 default = '2.4.2'
-kind = 'STRING'
+kind = { ARG = {} }
 [spring-cloud-version]
 about = 'Spring Cloud version'
-default = '2020.0.0'
-kind = 'STRING'
-[gradle-version]
-about = 'Gradle wrapper version'
-default = '6.8.1'
-kind = 'STRING'
+default = '2020.0.1'
+kind = { ARG = {} }
 [group]
-about = "artifact group & base package"
+about = 'artifact group & base package'
 short = 'g'
 default = 'io.spring.sample'
-kind = 'STRING'
+kind = { ARG = {} }
+[gradle-wrapper]
+about = 'init Gradle wrapper'
+kind = { CMD = { cmd = 'gradle wrapper --gradle-version 6.8.2 --distribution-type bin --gradle-distribution-sha256-sum 8de6efc274ab52332a9c820366dd5cf5fc9d35ec7078fd70c8ec6913431ee610' } }

@@ -1,4 +1,4 @@
 [kotlin-version]
 about = 'kotlin lang version'
-default = '1.4.21'
-kind = 'STRING'
+default = '1.4.30'
+kind = { ARG = {} }
