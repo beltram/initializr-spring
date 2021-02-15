@@ -13,10 +13,10 @@ default = 'io.spring.sample'
 kind = { ARG = {} }
 [no-gradle-wrapper]
 about = 'do not init Gradle wrapper'
-kind = { CMD = { default = true, cmd = 'gradle -q wrapper --gradle-version 6.8.2 --gradle-distribution-sha256-sum 8de6efc274ab52332a9c820366dd5cf5fc9d35ec7078fd70c8ec6913431ee610' } }
+kind = { CMD = { order = 0, default = true, cmd = 'gradle -q wrapper --gradle-version 6.8.2 --gradle-distribution-sha256-sum 8de6efc274ab52332a9c820366dd5cf5fc9d35ec7078fd70c8ec6913431ee610' } }
 [test]
 about = 'executes tests'
-kind = { CMD = { cmd = './gradlew check' } }
+kind = { CMD = { order = 1, cmd = './gradlew check' } }
 [run]
 about = 'runs the application'
-kind = { CMD = { cmd = './gradlew bootRun' } }
+kind = { CMD = { order = 1, cmd = './gradlew bootRun' } }
