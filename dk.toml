@@ -1,18 +1,15 @@
 [spring-boot-version]
 about = 'Spring Boot version'
-default = '2.4.2'
-kind = { ARG = {} }
+kind = { ARG = { default = '2.4.2' } }
 
 [spring-cloud-version]
 about = 'Spring Cloud version'
-default = '2020.0.1'
-kind = { ARG = {} }
+kind = { ARG = { default = '2020.0.1' } }
 
 [group]
 about = 'artifact group & base package'
 short = 'g'
-default = 'io.spring.sample'
-kind = { ARG = {} }
+kind = { ARG = { default = 'io.spring.sample' } }
 
 [no-gradle-wrapper]
 about = 'do not init Gradle wrapper'
