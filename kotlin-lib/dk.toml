@@ -1,0 +1,3 @@
+[module]
+about = 'module name'
+kind = { MULTI = { default = ['api', 'error', 'kafka'] } }
